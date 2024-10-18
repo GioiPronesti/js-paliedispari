@@ -12,4 +12,26 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 
  // const text = isPalindromword(word)
     return result /boolean    true/false
+
+dichiaro variabile userWord dal prompt 
+
+poi creo dichiaro funzione è una parola palindroma ? 
+gli passo la stinga scelta dall'utente
+
+e mi ritorna l'esito del controllo vero o falso
+
  */
+const userWord = prompt("scegli una parola ")
+
+    for ( i=0; i < userWord.length; i++ ){  // string
+
+        word = userWord[i]
+
+        console.log(i,word)
+    }
+
+    
+
+
+//function isPalindrome(word){ 
+//}
