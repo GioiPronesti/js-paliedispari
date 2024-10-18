@@ -22,32 +22,36 @@ e mi ritorna l'esito del controllo vero o falso
 
 una parola è palindroma quando si può leggere sia da destra che da sinistra. 
 caratteri uguali sia a destra che sinistra 
-
+palindroma
  */
-const userWord = prompt("scegli una parola ");
 
-palindromeWord = false;
+function isPalindrome(word) {
 
-for (i = 0; i < userWord.length; i++) {
-  // string
-
-  let char = userWord.at(-i - 1);
-
-  console.log(i, char);
-
-  if (userWord === char) {
-    palindromeWord = true;
+  let userWordReverse = "";
+  for (let i = word.length - 1; i >= 0; i--) {
+    // string
+    let char = word.at(i);
+    userWordReverse = userWordReverse + char;
   }
+
+  if (userWordReverse === word) {
+
+    return true
+  } else {
+    return false
+  }
+
 }
 
-if (palindromeWord) {
-  message = consol.log(" esito positivo: la parola è palindroma");
-} else {
-  message = console.error("esito negativo: la parola non è palidroma");
-} 
+const userWord = prompt("scegli una parola ");
 
-console.log(message);
+const result = isPalindrome(userWord)
+
+if (result === true) {
+  console.log(" esito positivo: la parola è palindroma");
+} else {
+  console.error("esito negativo: la parola non è palidroma");
+}
 
 //function isPalindrome(word){
 //}
-
