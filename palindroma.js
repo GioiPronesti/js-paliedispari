@@ -1,9 +1,9 @@
-console.log('hello console')
+console.log("hello console");
 
 /*
 Palidroma
 Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
-*/ 
+*/
 /*
  Descrizione del problema
 
@@ -20,18 +20,29 @@ gli passo la stinga scelta dall'utente
 
 e mi ritorna l'esito del controllo vero o falso
 
+una parola è palindroma quando si può leggere sia da destra che da sinistra. 
+caratteri uguali sia a destra che sinistra 
+
  */
-const userWord = prompt("scegli una parola ")
+const userWord = prompt("scegli una parola ");
 
-    for ( i=0; i < userWord.length; i++ ){  // string
+for (i = 0; i < userWord.length; i++) {
+  // string
 
-        word = userWord[i]
+  let char = userWord.at(-i -1);
 
-        console.log(i,word)
+  console.log(i, char);
+}
+
+  
+
+    if (userWord === char){
+
+       message = consol.log(" esito positivo: la parola è palindroma") 
+    } else {
+        message = console.error("esito negativo: la parola non è palidroma")
     }
 
-    
 
-
-//function isPalindrome(word){ 
+//function isPalindrome(word){
 //}
