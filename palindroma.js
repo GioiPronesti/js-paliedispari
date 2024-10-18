@@ -26,23 +26,28 @@ caratteri uguali sia a destra che sinistra
  */
 const userWord = prompt("scegli una parola ");
 
+palindromeWord = false;
+
 for (i = 0; i < userWord.length; i++) {
   // string
 
-  let char = userWord.at(-i -1);
+  let char = userWord.at(-i - 1);
 
   console.log(i, char);
+
+  if (userWord === char) {
+    palindromeWord = true;
+  }
 }
 
-  
+if (palindromeWord) {
+  message = consol.log(" esito positivo: la parola è palindroma");
+} else {
+  message = console.error("esito negativo: la parola non è palidroma");
+} 
 
-    if (userWord === char){
-
-       message = consol.log(" esito positivo: la parola è palindroma") 
-    } else {
-        message = console.error("esito negativo: la parola non è palidroma")
-    }
-
+console.log(message);
 
 //function isPalindrome(word){
 //}
+
